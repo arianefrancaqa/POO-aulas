@@ -13,7 +13,7 @@ public class DepartamentoFiscal {
     //Impostos devem ser em número decimal entre 0.1.. até 0.9..
     public void calculaGuias(){
         Double valorGuia = faturamentoEmpresa * impostos;
-        System.out.println("O valor da sua guia é de: R$" + valorGuia + " -----> Id Funcionário responsável pela emissão da guia: " + idFuncionario);
+        System.out.println("\nO valor da sua guia é de: R$" + valorGuia + " -----> Id Funcionário responsável pela emissão da guia: " + idFuncionario+"\n");
     }
 
     public Integer getIdFuncionario() {

@@ -14,7 +14,7 @@ public class DepartamentoContabil {
 
     public void calcularAtivo(){
         Double calculaAtivo = passivoEmpresa + patrimonioLiquido;
-        System.out.println("O cálculo do seu patrimonio líquido é de: R$ "+ calculaAtivo+ " ----> Id Funcionário responsável pela emissão do Patrimonio Líquido: "+ idFuncionario );
+        System.out.println("\nO cálculo do seu patrimonio líquido é de: R$ "+ calculaAtivo+ " ----> Id Funcionário responsável pela emissão do Patrimonio Líquido: "+ idFuncionario +"\n");
     }
 
     public Integer getIdFuncionario() {

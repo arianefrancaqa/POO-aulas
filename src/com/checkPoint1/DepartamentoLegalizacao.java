@@ -19,7 +19,7 @@ public class DepartamentoLegalizacao {
     }
 
     public void renovacaoAlvaras(){
-        System.out.println("Renovação de Alvará para a empresa " + nomeFantasia + " cujo o CNPJ é " + cnpj+ " com o Faturamento mensal de " + faturamentoMensal);
+        System.out.println("\nRenovação de Alvará para a empresa " + nomeFantasia + " cujo o CNPJ é " + cnpj+ " com o Faturamento mensal de " + faturamentoMensal+"\n");
     }
 
     public String getNomeFantasia() {

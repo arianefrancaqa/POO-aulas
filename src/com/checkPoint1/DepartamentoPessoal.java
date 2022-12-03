@@ -14,11 +14,11 @@ public class DepartamentoPessoal {
     }
 
     public void calcularFolhaPagamentoFuncionarios(Float remuneracao){
-        System.out.println( "O valor da Folha de Pagamento do Funcionário "+ nomeFuncionario+" "+sobrenomeFuncionario +" é: R$ " + remuneracao);
+        System.out.println( "\nO valor da Folha de Pagamento do Funcionário "+ nomeFuncionario+" "+sobrenomeFuncionario +" é: R$ " + remuneracao+"\n");
     }
 
     public void calcularFolhaPagamentoFuncionarios(Float remuneracao, Float bonusParticipacao){
-        System.out.println("O valor da Folha de Pagamento do Funcionário "+ nomeFuncionario+" "+sobrenomeFuncionario +" com bonus é: R$ " + (remuneracao + bonusParticipacao));
+        System.out.println("\nO valor da Folha de Pagamento do Funcionário "+ nomeFuncionario+" "+sobrenomeFuncionario +" com bonus é: R$ " + (remuneracao + bonusParticipacao)+"\n");
     }
 
     public String getNomeFuncionario() {
