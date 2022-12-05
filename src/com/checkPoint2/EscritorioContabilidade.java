@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 public class EscritorioContabilidade {
 
-    private String cnpj;
+    private Long cnpj;
     private ArrayList<Departamento> listaDepartamento = new ArrayList<>();
 
 
-    public EscritorioContabilidade(String cnpj) {
+    public EscritorioContabilidade(Long cnpj) throws Exception {
+        if(cnpj.toString().length() > 14){
+            throw new Exception("O CNPJ tem mais de 14 dígitos");
+        }else if(cnpj.toString().length() < 14 ){
+            throw new Exception("O CNPJ tem menos de 14 dígitos");
+        }
         this.cnpj = cnpj;
     }
 
@@ -33,11 +38,11 @@ public class EscritorioContabilidade {
 
     }
 
-    public String getCnpj() {
+    public Long getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(String cnpj) {
+    public void setCnpj(Long cnpj) {
         this.cnpj = cnpj;
     }
 
