@@ -1,7 +1,6 @@
 package com.checkPoint2;
 
 import java.time.LocalDate;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,10 +10,11 @@ public class Main {
         Long cnpj1;
 
         try {
-            System.out.println("Digite o cnpj da Empresa: (Não pode conter mais de 14 dígitos) ");
+            System.out.println("Digite o cnpj da Empresa: (Não pode conter mais ou menos de 14 dígitos) ");
             cnpj1 = scanner.nextLong();
 
             EscritorioContabilidade escritorioContabilidade = new EscritorioContabilidade(cnpj1);
+
 
             DepartamentoContabil dpContabil1 = new DepartamentoContabil("Departamento Contábil Zona Sul São Paulo",122548,40000, 350000, 5000, 60000);
             DepartamentoContabil dpContabil2 = new DepartamentoContabil("Departamento Contábil Zona Leste Porto Alegre",253222,3000, 150000, 2510, 25320);
@@ -33,6 +33,7 @@ public class Main {
             escritorioContabilidade.addDepartamentos(dpLegalizacao2);
 
             escritorioContabilidade.calcularCustasTotal();
+            escritorioContabilidade.lerDepartamento();
 
             dpContabil1.calcularAtivo();
             dpContabil2.calcularCustas();
@@ -46,19 +47,8 @@ public class Main {
 
 
             System.out.println(escritorioContabilidade.getListaDepartamento());
-        }catch (InputMismatchException e) {
-            System.err.println("Erro na entrada de dados, digite um valor inteiro!     " + e);
-
-        }
-        catch (ArithmeticException e) {
-            System.err.println("Erro. Impossivel divisão por 0!     " + e);
-
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
-
     }
 }
