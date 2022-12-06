@@ -7,11 +7,11 @@ public class EscritorioContabilidade {
     private Long cnpj;
     private ArrayList<Departamento> listaDepartamento = new ArrayList<>();
 
-    public EscritorioContabilidade(Long cnpj) throws Exception {
+    public EscritorioContabilidade(Long cnpj) throws DataException {
         if (cnpj.toString().length() > 14) {
-            throw new Exception("O CNPJ tem mais de 14 dígitos");
+            throw new DataException("O CNPJ tem mais de 14 dígitos\n");
         } else if (cnpj.toString().length() < 14) {
-            throw new Exception("O CNPJ tem menos de 14 dígitos");
+            throw new DataException("O CNPJ tem menos de 14 dígitos\n");
         }
         this.cnpj = cnpj;
     }
